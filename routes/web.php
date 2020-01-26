@@ -50,8 +50,19 @@ route::get('saludos' , ['as' => 'saludoNombre', 'uses' => 'PagesController@salud
 
 ////////////////////////////////////
 
+route::get('mensajes', ['as' => 'messages.index', 'uses' => 'MessagesController@index']);
+
 route::get('mensajes/create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
 
+route::post('mensajes', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+
+route::get('mensajes/{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+
+route::get('mensajes/{id}/edit', ['as' => 'messages.edit', 'uses' => 'MessagesController@edit']);
+
+route::put('mensajes/{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+
+route::delete('mensajes/{id}', ['as' => 'messages.destroy', 'uses' => 'MessagesController@destroy']);
 /*
 darle nombre a las url o rutas.  Puesto que se hace referencia al nombre de la ruta y no a la url
 */

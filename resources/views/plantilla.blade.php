@@ -18,9 +18,12 @@
 	<header>
 			<nav>
 				<a href=" {{route('home')}} "> Inicio</a>
+				
 				<a href=" {{route ('saludoNombre')}} ">Saludos</a>
+				
 				<a href=" {{ route('messages.create')}} ">Contactos</a>
 
+				<a href="{{route('messages.index')}}">Mensaje</a>
 			</nav>
 
 	</header>

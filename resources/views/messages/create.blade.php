@@ -11,13 +11,13 @@
 
 <!---La url es la acción del formulario cuando se vaya a colocar en el controlador 
 action=contacto-->
-	<form method="post" action="contacto"> 
+	<form method="post" action= "{{ route('messages.store')}}"> 
 		<input type="hidden" name="_token" value= "{{ csrf_token() }}" >
 		{!! csrf_field() !!}
 		<p>
 			<label for="nombre">
 			Nombre
-			<input type="text" name="nombre1" value="{{ old('nombre1')}}">
+			<input type="text" name="nombre" value="{{ old('nombre1')}}">
 			{!! $errors->first('nombre1', '<span class=error>:message</span>') !!}
 		</label>
 		</p>
